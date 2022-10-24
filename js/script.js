@@ -102,30 +102,30 @@ function DrawCard(){
 }
 
 
+DrawCard();
+getNubersLike();
 
 // funzione che cambia il coloro al like 
-
-addEventListener("click" ,function likeIncrement(){
-  
-    for(let i = 0 ; i < posts.length; i++){
-        const likesbutton = document.querySelector(".like-button")
-        likesbutton.classList.toggle('like-button--liked')
-    }
-
-   
-
-
-
-} )
+const buttonLikes = document.querySelectorAll('.like-button');
+buttonLikes.forEach(oneBtnLike => {
+    oneBtnLike.addEventListener('click', ()=> {
+        oneBtnLike.classList.toggle('like-button--liked');
+        incrementLikeNuber()
+    }) 
+});
 
 
 
 
+function getNubersLike(){
+const nuberLike = document.querySelectorAll('.js-likes-counter');
+nuberLike.forEach(oneLike =>{
+    oneLike.innerHTML ;
+    console.log(oneLike.innerHTML);
+})
+    return 
 
-
-
-
-
+}
 
 
 
@@ -134,4 +134,11 @@ addEventListener("click" ,function likeIncrement(){
 
 
 
-DrawCard()
+
+
+
+
+
+
+
+

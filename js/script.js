@@ -103,29 +103,31 @@ function DrawCard(){
 
 
 DrawCard();
-getNubersLike();
 
 // funzione che cambia il coloro al like 
 const buttonLikes = document.querySelectorAll('.like-button');
 buttonLikes.forEach(oneBtnLike => {
     oneBtnLike.addEventListener('click', ()=> {
         oneBtnLike.classList.toggle('like-button--liked');
-        incrementLikeNuber()
+        likeAdd();
     }) 
 });
 
+// incremento like 
+
+function likeAdd(){
+    const likeCounter = document.querySelectorAll('.js-likes-counter');
+    console.log(likeCounter)
+    likeCounter.forEach(oneLike => {
+    console.log(parseInt(oneLike))
 
 
-
-function getNubersLike(){
-const nuberLike = document.querySelectorAll('.js-likes-counter');
-nuberLike.forEach(oneLike =>{
-    oneLike.innerHTML ;
-    console.log(oneLike.innerHTML);
+    
 })
-    return 
-
 }
+
+
+
 
 
 
